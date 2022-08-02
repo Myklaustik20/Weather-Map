@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=Lato&family=Poppins&family=Roboto+Serif:opsz@8..144&family=Roboto:wght@400;500&family=Tiro+Gurmukhi&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: 'Roboto Serif', serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to left top, #FFF9CA, #1F4690);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    height: 80%;
+    background: url(./image/weather1.jpg) no-repeat center center/cover;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 10px 2px white;
+}
+
+.main-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.1));
+}
+
+.top {
+    text-align: center;
+}
+
+.top h1 {
+    color: white;
+    line-height: 2;
+}
+
+.top input, .top button {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 5px;
+    outline: none;
+    border: none;
+}
+
+.top input {
+    background-color: rgba(0,0,0,.5);
+    border-bottom: solid 2px blue;
+    border-radius: 10px 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.top input:focus {
+    color: white;
+    font: 16px;
+}
+
+.top input::placeholder {
+    color: aliceblue;
+}
+
+.top button {
+    background-color: #0078AA;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.top button:hover {
+    background-color: #231955;
+}
+
+.top .error {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.icon {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.location {
+    padding-bottom: 15px;
+    text-align: center;
+    color: white;
+    line-height: 1.5;
+}
+
+.location .city {
+    font: 20px;
+    font-weight: bold;
+}
+
+.current {
+    width: 100%;
+    position: relative;
+    padding-top: 10px;
+    color: white;
+    text-align: left;
+}
+
+.current::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+.current > * {
+    padding-bottom: 10px;
+}
+
+.temp-range {
+    font-weight: bold;
+}
